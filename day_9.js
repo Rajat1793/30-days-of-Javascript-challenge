@@ -29,7 +29,7 @@ lastChild.lastChild.remove()
 
 // Task 7: Select an HTML element and change one of its attributes (e.g., src of an img tag)
 const myImage = document.getElementById('myImage')
-myImage.src = 'https://images.meesho.com/images/products/391501890/guokx_512.jpg'
+myImage.src = './assets/pexels-vladalex94-1402787.jpg'
 
 // Task 8: Add and remove a CSS class to/from an HTML element
 const removeClass = document.getElementById('myElement')
