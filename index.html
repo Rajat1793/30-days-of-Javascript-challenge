@@ -11,15 +11,49 @@
     <h1 id="heading">Welcome to 30 days of Javascript</h1>
     <div id="myElement">Hi</div>
     <div class="myClass">Hello</div>
-    <ul id="myList">
+    <ul id="myList" class="parentElement">
       <li>I'm list</li>
       <li id="elementRemove">I'll be removed</li>
     </ul>
     <div>
-      <img src="" id="myImage" width="300" height="300">
+      <img src="/assets/pexels-vladalex94-1402787.jpg" id="myImage" width="300" height="300">
     </div>
     <div id="myPara">I'm paragraph</div>
     <button type="submit" id="myButton">Click me</button>
+    <div>
+      <input type="text" name="TextBox" id="myTextBox" placeholder="Enter the text">
+    </div>
+    <div>
+      <h3>Sample Form</h3>
+      <form id="myForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <br><br>
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <br><br>
+          
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          <br><br>
+          
+          <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div>
+      <h3>Select Dropdown Example</h3>
+    
+    <label for="mySelect">Choose an option:</label>
+    <select id="mySelect">
+        <option value="">--Please choose a Name--</option>
+        <option value="Rajat">Rajat</option>
+        <option value="Ram">Ram</option>
+        <option value="Shyam">Shyam</option>
+    </select>
+
+    <p id="displayParagraph">Selected value will be displayed here.</p>
+    </div>
     <!-- <div class="split-container">
         <div class="split">
           <h2 id ="heading">Click on day button to see the questions</h2>
@@ -60,6 +94,6 @@
 
     </div> -->
 
-    <script src="./day_9.js"></script>
+    <script src="./day_10.js"></script>
   </body>
 </html>
