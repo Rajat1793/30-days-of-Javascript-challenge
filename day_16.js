@@ -47,11 +47,65 @@ console.log(reverseString(''));
 // Task 6: Write a recursive function to check if a string is a palindrome. Log the result for a few test case
 // google help
 function palindrome(str){
-    if (str.length <=1 ) return true
-    if (str.charAt[0] !== str.charAt(str.length -1))
+    if (str.length <= 1 ) return true
+    if (str.charAt(0) !== str.charAt(str.length -1))
         return palindrome(str.slice(1,-1))
 }
-console.log(palindrome("hello"));
+console.log(palindrome("raar"));
 console.log(palindrome('hello'));
 
 // Task 7: Write a recursive function to perform a binary search on a sorted array. Log the index of the target element for a few test cases.
+function binarySearch(arr, target, left=0,right=arr.length -1){
+    if (left > right) return -1
+    const mid = Math.floor((left +right) /2)
+    if (arr[mid] === target)
+        return mid
+    return arr[mid] >target ? binarySearch(arr, target, left, mid -1): binarySearch(arr, target, mid +1, right)
+}
+
+console.log(binarySearch([1,2,3,4,5],3));
+console.log(binarySearch([1,2,3,4,5],6));
+
+// Task 8: Write a recursive function to count the occurrences of a target element in an array. 
+        // Log the result for a few test cases
+function countOccurance(arr, target){
+    if (arr.length === 0) return 0
+    const count = arr[0] === target ? 1: 0
+    return count + countOccurance(arr.slice(1),target)
+}
+console.log(countOccurance([1,1,5,5,1],1));
+console.log(countOccurance([5],1));
+
+// Task 9: Write a recursive function to perform an in-order traversal of a binary tree. Log the nodes as they are visited.
+//google help
+class TreeNode {
+    constructor(value){
+        this.value = value,
+        this.left = null,
+        this.right = null
+    }
+}
+function inOrderTraversal (node){
+    if (node){
+        inOrderTraversal(node.left)
+        console.log(node.value);
+        inOrderTraversal(node.right)
+    }
+}
+const root = new TreeNode(1)
+root.left = new TreeNode(2)
+root.right = new TreeNode(3)
+inOrderTraversal(root)
+
+//Task 10: Write a recursive function to calculate the depth of a binary tree. Log the result for a few test cases.
+// google help
+function calculateDepth(node) {
+    if (!node) return 0;
+    return 1 + Math.max(calculateDepth(node.left), calculateDepth(node.right));
+}
+
+const rootDepth = new TreeNode(1);
+rootDepth.left = new TreeNode(2);
+rootDepth.right = new TreeNode(3);
+rootDepth.left.left = new TreeNode(4);
+console.log(calculateDepth(rootDepth)); 
